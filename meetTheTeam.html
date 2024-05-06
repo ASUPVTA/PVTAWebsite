@@ -1,18 +1,142 @@
 <!DOCTYPE html>
+
 <head>
   <link rel="stylesheet" type="test/css" href="styles.css" />
 
   <style>
     body {
-      background: radial-gradient(ellipse at center, rgb(3, 3, 115), rgba(0, 0, 0, 0.972));
+      background: radial-gradient(ellipse at center,
+          rgba(0, 153, 255, 0.338),
+          white);
+    }
+
+    .header-font {
+      color: rgb(52, 52, 52);
+      top: 50px;
+      position: relative;
+      font-size: 25px;
+      font-size: 35px;
+      text-align: center;
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      z-index: 2;
+      height: 45px;
+      width: 100%;
+      background: rgb(38, 38, 38);
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      border-bottom: 1px solid rgb(255, 0, 0);
+    }
+
+    .nav {
+      padding-left: 20px;
+      background-color: transparent;
+      margin-top: 6px;
+      font-size: 25px;
+      border: none;
+      color: white;
+      border-bottom: none;
+      text-decoration: none;
+    }
+
+    .nav:hover {
+      color: rgba(255, 192, 203, 0.868);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .team {
+      top: 50px;
+      position: relative;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: warp;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: warp;
+      margin-left: 30px;
+    }
+
+    .container p {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .container p:hover {
+      transform: translateY(-5px);
+    }
+
+    .container a {
+      color: black;
+    }
+
+    .container img {
+      max-width: 100%;
+      width: 200px;
+      height: 200px;
+      padding-bottom: 5px;
+    }
+
+    .container .noTransform:hover {
+      transition: none;
+      transform: none;
     }
   </style>
 </head>
 
 <body>
+  <div class="nav-bar">
+    <a class="nav" href="index.html">Home</button>
+      <a class="nav" href="meetTheTeam.html">People</a>
+      <a class="nav" href="contactUs.html">Contact Us</a>
+  </div>
+
   <a href="index.html">Go back</a>
-  <h1 style="color: white; font-size: 45px;">Meet the team!</h1>
-  <hr style="left: 0; position: absolute; width: 60%;">
-    <h3 style="color: white; top: 50px; position: relative;font-size: 25px;">Project supervisor</h3>f
-  <h3 style="color: white; top: 50px; position: relative;font-size: 25px;">Our developers</h3>
+  <h1 style="position: relative;text-align: center;color: rgb(52, 52, 52);; font-size: 45px;">Meet the team!</h1>
+  <h3 class="header-font">
+    Faculty</h3>
+  <div class="team">
+    <div class="container">
+      <img href="#" src=https://www.public.asu.edu/~smarouli/Spiro_Maroulis/Home_files/picture.jpg>
+      <p><a href="https://www.public.asu.edu/~smarouli/Spiro_Maroulis/Home.html" target="_blank">Spiro Maroulis
+          <br>School of Public Affairs
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src=https://webapp4.asu.edu/photo-ws/directory_photo/akuhn1?size=medium&break=1712950866>
+      <p><a href="https://search.asu.edu/profile/1058397" target="_blank">Anthony Kuhn
+          <br>Fulton Schools of Engineering
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#"
+        src=https://media.licdn.com/dms/image/C4D03AQGnvIHli1dteg/profile-displayphoto-shrink_400_400/0/1592232671632?e=1718236800&v=beta&t=rwrN2EgvLKSB01ZJyF519WnMc33kr3Ki6RFJaJ2CFuE>
+      <p class="noTransform">Chris Hayter
+        <br>Georgia Institute of Technology
+        </a>
+      </p>
+    </div>
+  </div>
+  <h3 class="header-font ">Current Student Fellows</h3>
+
+  <p style="position: relative; top:1000px; visibility: hidden;">da</p>
 </body>

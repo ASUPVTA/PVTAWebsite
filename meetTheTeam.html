@@ -77,10 +77,6 @@
       transition: transform 0.3s ease;
     }
 
-    .container p:hover {
-      transform: translateY(-5px);
-    }
-
     .container a {
       color: black;
     }
@@ -92,9 +88,8 @@
       padding-bottom: 5px;
     }
 
-    .container .noTransform:hover {
-      transition: none;
-      transform: none;
+    .container .transform:hover {
+      transform: translateY(-5px);
     }
   </style>
 </head>
@@ -104,15 +99,13 @@
     <a class="nav" href="index.html">Home</button>
       <a class="nav" href="meetTheTeam.html">People</a>
   </div>
-
-  <a href="index.html">Go back</a>
   <h1 style="position: relative;text-align: center;color: rgb(52, 52, 52);; font-size: 45px;">Meet the team!</h1>
-  <h3 class="header-font">
-    Faculty</h3>
+  <!--Faculty-->
+  <h3 class="header-font">Faculty</h3>
   <div class="team">
     <div class="container">
       <img href="#" src=https://www.public.asu.edu/~smarouli/Spiro_Maroulis/Home_files/picture.jpg>
-      <p><a href="https://www.public.asu.edu/~smarouli/Spiro_Maroulis/Home.html" target="_blank">Spiro Maroulis
+      <p class="transform"><a href="https://www.public.asu.edu/~smarouli/Spiro_Maroulis/Home.html" target="_blank">Spiro Maroulis
           <br>School of Public Affairs
           <br>Arizona State University
         </a>
@@ -121,8 +114,8 @@
     </div>
     <div class="container">
       <img href="#" src=https://webapp4.asu.edu/photo-ws/directory_photo/akuhn1?size=medium&break=1712950866>
-      <p><a href="https://search.asu.edu/profile/1058397" target="_blank">Anthony Kuhn
-          <br>Fulton Schools of Engineering
+      <p class="transform"><a href="https://search.asu.edu/profile/1058397" target="_blank">Anthony Kuhn
+          <br>Ira A. Fulton Schools of Engineering
           <br>Arizona State University
         </a>
       </p>
@@ -130,13 +123,105 @@
     <div class="container">
       <img href="#"
         src=https://media.licdn.com/dms/image/C4D03AQGnvIHli1dteg/profile-displayphoto-shrink_400_400/0/1592232671632?e=1718236800&v=beta&t=rwrN2EgvLKSB01ZJyF519WnMc33kr3Ki6RFJaJ2CFuE>
-      <p class="noTransform">Chris Hayter
+      <p>Chris Hayter
         <br>Georgia Institute of Technology
         </a>
       </p>
     </div>
   </div>
+  <!--Current students fellows-->
   <h3 class="header-font ">Current Student Fellows</h3>
+  <div class="team">
+    <div class="container">
+      <img href="#" src="images/no_picture.jpg">
+      <p><a>Gursparsh Singh Sodhi
+          <br>Ira A. Fulton Schools of Engineering
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src="images/ben.jpg">
+      <p><a>Ben Ashkenazi
+          <br>Ira A. Fulton Schools of Engineering
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src="images/julia.png">
+      <p><a>Julia Reinert
+          <br>W. P. Carey School of Business
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="team">
+    <div class="container">
+      <img href="#" src="images/ava.jpg">
+      <p>Ava Lemke
+        <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src="images/alex.jpg">
+      <p>Alex Aragon
+        <br>W. P. Carey School of Business
+        <br>Arizona State University
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!--Alumni-->
+  <h3 class="header-font ">Alumni</h3>
+  <div class="team">
+    <div class="container">
+      <img href="#" src="images/no_picture.jpg">
+      <p><a>Alex Marie Solomon
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src="images/no_picture.jpg">
+      <p><a>Sarah Hurmez
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src="images/no_picture.jpg">
+      <p><a>Madeline Damasco
+          <br>Arizona State University
+        </a>
+      </p>
+    </div>
+  </div>
+  
+  <br>
+  
+  <div class="team">
+    <div class="container">
+      <img href="#" src="images/no_picture.jpg">
+      <p>Dane Jensen
+        <br>Arizona State University
+        </a>
+      </p>
+    </div>
+    <div class="container">
+      <img href="#" src="images/no_picture.jpg">
+      <p>Gabriel Ammirata
+        <br>Arizona State University
+        </a>
+      </p>
+    </div>
+  </div>
 
   <p style="position: relative; top:1000px; visibility: hidden;">da</p>
 </body>

@@ -54,13 +54,20 @@ body {
   transition: transform 0.3s ease;
 }
 
+.intro h6 {
+  font-size: 23px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  color: rgba(52, 52, 52, 0.765);
+}
+
 .introHeader {
   top: 20px;
   position: relative;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 65px;
-  color: rgb(31, 31, 31); /*248, 182, 0*/
+  color: rgb(31, 31, 31);
   text-align: center;
   position: relative;
 }
@@ -126,12 +133,12 @@ body {
 
 .container {
   position: relative;
-  width:900px;
+  width: 900px;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: warp;
+  flex-wrap: wrap;
   padding: 30px;
   left: 100px;
   top: -350px;
@@ -188,17 +195,75 @@ body {
   opacity: 1;
   transition-delay: 0.2s;
 }
-
 @media (max-width: 768px) {
-  .article-container {
-    width: 95%;
-    flex-direction: column;
+  .intro {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    top: 20px;
   }
-  .article {
-    font-size: 14px;
+
+  .intro h6 {
+    font-size: 15px;
+  }
+
+  .introHeader {
+    font-size: 30px;
+    text-align: center;
+    top: 20px;
   }
 
   .container {
     flex-direction: column;
+    width: 100px;
+    left: 20px;
+    top: -250px;
+    padding: 10px;
+  }
+
+  .container .card {
+    width: 220px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 250px;
+  }
+
+  .container .card .image {
+    width: 220px;
+    left: 40px;
+  }
+
+  .container .card .content {
+    padding: 5px 10px;
+  }
+
+  .container .card:hover .content {
+    margin-top: 20px;
+  }
+  .promotional-container {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 800px;
+    height: auto;
+  }
+
+  .video iframe {
+    width: 230px;
+    height: 230px;
+    height: auto;
+  }
+
+  .article-container {
+    flex-direction: row;
+    width: 330px;
+  }
+
+  .article {
+    font-size: 12px;
+  }
+  .article a {
+    text-decoration: none;
   }
 }

@@ -45,7 +45,7 @@ body {
   position: relative;
   top: 40px;
   width: 65%;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .intro a {
@@ -140,7 +140,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 30px;
-  left: 100px;
+  left: 20px;
   top: -350px;
 }
 
@@ -196,6 +196,10 @@ body {
   transition-delay: 0.2s;
 }
 @media (max-width: 768px) {
+  .introHeader{
+    margin-top: 10px;
+  }
+
   .intro {
     text-align: center;
     width: 90%;
@@ -211,7 +215,7 @@ body {
   .introHeader {
     font-size: 30px;
     text-align: center;
-    top: 20px;
+    padding-top: 30px;
   }
 
   .container {
@@ -241,12 +245,19 @@ body {
   .container .card:hover .content {
     margin-top: 20px;
   }
+
   .promotional-container {
     position: relative;
     width: 100%;
     left: 0;
-    top: 800px;
+    top: 750px;
     height: auto;
+    align-items: center;
+  }
+
+  .promotional-header {
+    position: relative;
+    flex-direction: row;
   }
 
   .video iframe {

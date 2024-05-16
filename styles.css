@@ -80,14 +80,24 @@ body {
 .promotional-container {
   position: relative;
   color: white;
-  width: 410px;
-  height: 420px;
+  width: 400px;
+  height: 650px;
   background-color: rgba(255, 255, 255, 0.629);
   left: 70%;
   top: -200px;
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.735);
   border: 1px solid black;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.promotional-container p {
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  font: bold;
+  text-align: center;
 }
 
 .video {
@@ -98,12 +108,14 @@ body {
 
 .article-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
-  width: 380px;
+  width: 200px;
   height: 85px;
   margin: 15px;
   text-align: center;
+  align-content: end;
+  padding-left: 150px;
 }
 
 .article {
@@ -141,7 +153,7 @@ body {
   flex-wrap: wrap;
   padding: 30px;
   left: 20px;
-  top: -350px;
+  top: -500px;
 }
 
 .container .card {
@@ -196,7 +208,7 @@ body {
   transition-delay: 0.2s;
 }
 @media (max-width: 768px) {
-  .introHeader{
+  .introHeader {
     margin-top: 10px;
   }
 

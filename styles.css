@@ -45,6 +45,8 @@ body {
   top: 60px;
   width: 65%;
   margin: 0 auto; /* Center align */
+  text-align: center;
+
 }
 
 .intro a {

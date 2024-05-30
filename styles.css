@@ -302,5 +302,9 @@ body {
   }
   .mainpage-container {
     padding: 10px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items close to each other horizontally */
+    gap: 10px; /* Adjust the gap between items as needed */
   }
 }

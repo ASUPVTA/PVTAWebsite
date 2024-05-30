@@ -40,11 +40,11 @@ body {
 }
 
 .intro {
-  text-align: left;
+  text-align: center; /* Changed to center */
   position: relative;
   top: 60px;
   width: 65%;
-  margin-left: 20px;
+  margin: 0 auto; /* Center align */
 }
 
 .intro a {
@@ -143,17 +143,31 @@ body {
 
 .container {
   position: relative;
-  width: 100%;
+  width: 65%;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Ensure alignment to the top */
   flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute space between card and promotional containers */
+  flex-wrap: nowrap; /* Prevent wrapping */
   padding: 30px;
-  margin-top: -200px; /* Adjusted to bring the container in line with the promotional container */
+  margin-top: 60px; /* Adjusted margin to align with the intro */
 }
 
-.container .card {
+.container .card-container {
+  width: 60%; /* Adjust as necessary */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .promotional-container-wrapper {
+  width: 35%; /* Adjust as necessary */
+  display: flex;
+  justify-content: center;
+}
+
+.card {
   position: relative;
   max-width: 200px;
   height: 175px;
@@ -167,12 +181,12 @@ body {
   border-radius: 15px;
 }
 
-.container .card:hover {
+.card:hover {
   height: 280px;
   max-width: 350px;
 }
 
-.container .card .image {
+.card .image {
   position: relative;
   width: 260px;
   height: 275px;
@@ -181,12 +195,12 @@ body {
   z-index: 1;
 }
 
-.container .card .image img {
+.card .image img {
   max-width: 100%;
   border-radius: 15px;
 }
 
-.container .card .content {
+.card .content {
   position: relative;
   top: -140px;
   padding: 10px 15px;
@@ -197,7 +211,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.container .card:hover .content {
+.card:hover .content {
   margin-top: 30px;
   visibility: visible;
   opacity: 1;
@@ -229,49 +243,45 @@ body {
 
   .container {
     flex-direction: column;
-    width: 100px;
+    width: 100%;
     left: 20px;
-    top: -250px;
     padding: 10px;
+    margin-top: 0; /* Remove margin adjustment for small screens */
   }
 
-  .container .card {
+  .container .card-container,
+  .container .promotional-container-wrapper {
+    width: 100%; /* Full width for each section */
+    margin-top: 20px;
+  }
+
+  .card {
     width: 220px;
     margin-left: 5%;
     margin-right: 5%;
     max-width: 250px;
   }
 
-  .container .card .image {
+  .card .image {
     width: 220px;
     left: 40px;
   }
 
-  .container .card .content {
+  .card .content {
     padding: 5px 10px;
   }
 
-  .container .card:hover .content {
+  .card:hover .content {
     margin-top: 20px;
   }
 
   .promotional-container {
-    position: relative;
     width: 100%;
-    left: 0;
-    top: 750px;
-    height: auto;
-    align-items: center;
-  }
-
-  .promotional-header {
-    position: relative;
-    flex-direction: row;
+    margin-top: 20px;
   }
 
   .video iframe {
     width: 230px;
-    height: 230px;
     height: auto;
   }
 

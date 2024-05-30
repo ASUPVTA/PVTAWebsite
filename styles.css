@@ -142,12 +142,13 @@ body {
 .container {
   position: relative;
   display: flex;
-  align-items: flex-start; 
+  align-items: center; 
   flex-direction: row;
   justify-content: space-between; 
   flex-wrap: nowrap;
   padding: 30px 0; 
   margin-top: 60px;
+  gap: 10px;
 }
 
 .container .card-container {

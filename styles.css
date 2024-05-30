@@ -300,4 +300,7 @@ body {
   .article a {
     text-decoration: none;
   }
+  .mainpage-container {
+    padding: 10px;
+  }
 }

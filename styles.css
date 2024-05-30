@@ -41,7 +41,7 @@ body {
 
 .intro {
   position: relative;
-  top: 60px;
+  top: 30px;
   width: 65%;
   margin: 0 auto; /* Center align */
   text-align: center;
@@ -141,7 +141,6 @@ body {
 
 .container {
   position: relative;
-  width: 65%;
   display: flex;
   align-items: flex-start; 
   flex-direction: row;
@@ -155,7 +154,7 @@ body {
   width: 60%; 
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 
@@ -165,19 +164,6 @@ body {
   justify-content: center;
 }
 
-.card {
-  position: relative;
-  max-width: 200px;
-  height: 175px;
-  background-color: #fff1f1;
-  margin: 30px 5px; 
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-  border-radius: 15px;
-}
 
 .card:hover {
   height: 280px;
@@ -198,15 +184,37 @@ body {
   border-radius: 15px;
 }
 
+.card {
+  position: relative;
+  max-width: 200px;
+  height: 150px;  /* Reduced height */
+  background-color: #fff1f1;
+  margin: 30px 50px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+  top: 140px; 
+}
+
 .card .content {
   position: relative;
-  top: -140px;
+  top: -120px;  /* Adjusted to lower the content */
   padding: 10px 15px;
   color: #111;
   text-align: center;
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
+}
+
+.container .promotional-container-wrapper {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;  /* Reduced margin to bring it closer to the cards */
 }
 
 .card:hover .content {
@@ -257,6 +265,7 @@ body {
     width: 220px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 10%;
     max-width: 250px;
   }
 
@@ -276,6 +285,8 @@ body {
   .promotional-container {
     width: 100%;
     margin-top: 20px;
+    align-self: flex-end;
+    float: right;
   }
 
   .video iframe {
@@ -296,11 +307,12 @@ body {
     text-decoration: none;
   }
   .mainpage-container {
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row;
     display: flex;
     align-items: center; 
+    flex-wrap: nowrap;
     justify-content: flex-start; 
+    align-items: center;
     gap: 10px; 
   }
 }

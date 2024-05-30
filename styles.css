@@ -296,7 +296,7 @@ body {
     text-decoration: none;
   }
   .mainpage-container {
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
     display: flex;
     align-items: center; 

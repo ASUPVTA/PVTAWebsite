@@ -1,5 +1,5 @@
-MobileHealthConnect, SafeHygiene4U, and Skill Center Assistant
-This is the support page for the MobileHealthConnect and SafeHygiene4U Applications
+SNAP Application Guide, MobileHealthConnect, SafeHygiene4U, and Skill Center Assistant
+This is the support page for the SNAP Application Guide, MobileHealthConnect, SafeHygiene4U and Skill Center Assistant Applications
 If you have any questions regarding operation of the application, please send an email to bimmelapps@gmail.com. 
 If you have any questions regarding CTC's operations please contact them directly at https://circlethecity.org/contact-us/ 
 Privacy policy: This application stores no data except for location, which is not stored anywhere outside of the application. 

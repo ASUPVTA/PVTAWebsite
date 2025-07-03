@@ -1,0 +1,1031 @@
+/* CSS Variables for ASU Colors and Fonts */
+:root {
+    --primary-color: #A6192E;
+    --secondary-color: #FFC20E;
+    --background-color: #FFFFFF;
+    --section-bg: #F2F2F2;
+    --item-bg: #FFFFFF;
+    --text-color: #333333;
+    --light-text: #666666;
+    --border-color: #A6192E;
+    --btn-bg: #A6192E;
+    --btn-hover-bg: #FFC20E;
+    --nav-bg: #FFFFFF;
+    --nav-text: #A6192E;
+    --nav-hover: #FFC20E;
+    --footer-bg: #FFFFFF;
+    --footer-text: #333333;
+    --social-icon-color: #A6192E;
+    --social-icon-hover: #FFC20E;
+    --input-bg: #FFFFFF;
+    --input-border: #CCCCCC;
+    --overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav {
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--nav-hover);
+}
+
+@media (max-width: 768px) {
+    .nav-title {
+        font-size: 1.2em;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+header.hero {
+    background-image: url('images/asu.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+header.hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+header.hero h1 {
+    font-size: 3.5em;
+    color: var(--background-color);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+header.hero p {
+    font-size: 1.5em;
+    color: var(--background-color);
+    margin-bottom: 1.5em;
+    line-height: 1.4;
+}
+
+.btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: var(--btn-bg);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-bg);
+    transform: scale(1.05);
+}
+
+/* Remaining original CSS preserved */
+/* All styles for .news-section, .about-video, .project-list, .fellow-photo, .avatar, etc. remain unchanged */
+
+/* Removed styles: .hamburger, .side-menu, .overlay */
+
+/* Additional responsiveness for mobile devices */
+@media (max-width: 768px) {
+    header.hero .hero-content {
+        width: 95%;
+    }
+
+    header.hero h1 {
+        font-size: 2.5em;
+    }
+
+    header.hero p {
+        font-size: 1.2em;
+    }
+}
+
+/* News Section Styling */
+.news-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.news-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary_color);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.news-box {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+}
+
+/* Single Full-Width Video */
+.about-video {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-video iframe {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .news-box {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .about-video {
+        max-width: 100%;
+    }
+
+    .news-title {
+        font-size: 1.8em;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-box {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .about-video {
+        max-width: 100%;
+    }
+
+    .news-title {
+        font-size: 1.8em;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it stays above the side menu */
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger span {
+    height: 2px;
+    width: 25px;
+    background: var(--nav-text);
+    margin-bottom: 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Side Navigation Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide the menu off-screen */
+    width: 250px;
+    height: 100%;
+    background: var(--nav-bg);
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu.open {
+    right: 0; /* Slide the menu into view */
+}
+
+.side-menu ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.side-menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary_color);
+    transition: width .3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.side-menu ul li a:hover::after {
+    width: 50%;
+}
+
+.side-menu ul li a:hover {
+    color: var(--nav-hover);
+}
+
+/* Active Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Overlay for Blurred Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay_bg);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999; /* Below the side menu */
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero Section with Background Image */
+header.hero {
+    background-image: url('images/asu.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+header.hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+header.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideUp 1s forwards;
+}
+
+header.hero h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideUp 1s forwards;
+    animation-delay: 0.3s;
+}
+
+header.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideUp 1s forwards;
+    animation-delay: 0.6s;
+}
+
+header.hero .btn {
+    padding: 15px 30px;
+    background: var(--btn_bg);
+    color: var(--background_color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.9s;
+}
+
+header.hero .btn:hover {
+    background: var(--btn_hover_bg);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section#about,
+section#projects,
+section#faculty,
+section#fellows,
+section#contact {
+    background: var(--section_bg);
+    border-bottom: 2px solid #CCCCCC;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+section#about.animate-fade-in,
+section#projects.animate-fade-in,
+section#faculty.animate-fade-in,
+section#fellows.animate-fade-in,
+section#contact.animate-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s forwards;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--primary_color);
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideDown 1s forwards;
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary_color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+section p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1em;
+    color: var(--light_text);
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+section p.delay-1 {
+    animation-delay: 0.5s;
+}
+
+section p.delay-2 {
+    animation-delay: 1s;
+}
+
+/* About Video */
+.about-video {
+    margin: 40px auto;
+    max-width: 800px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Project and People Lists */
+.project-list,
+.fellows-list,
+.people-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.project-item,
+.person-item,
+.fellow-item {
+    background: var(--item_bg);
+    padding: 30px;
+    margin: 10px;
+    flex: 1 1 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.project-item.delay-1,
+.person-item.delay-1,
+.fellow-item.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.project-item.delay-2,
+.person-item.delay-2,
+.fellow-item.delay-2 {
+    animation-delay: 1s;
+}
+
+.project-item.delay-3,
+.person-item.delay-3,
+.fellow-item.delay-3 {
+    animation-delay: 1.5s;
+}
+
+.project-item.delay-4,
+.person-item.delay-4,
+.fellow-item.delay-4 {
+    animation-delay: 2s;
+}
+
+.project-item.delay-5,
+.person-item.delay-5,
+.fellow-item.delay-5 {
+    animation-delay: 2.5s;
+}
+
+.project-item.delay-6,
+.person-item.delay-6,
+.fellow-item.delay-6 {
+    animation-delay: 3s;
+}
+
+.project-item.delay-7,
+.person-item.delay-7,
+.fellow-item.delay-7 {
+    animation-delay: 3.5s;
+}
+
+.project-item.delay-8,
+.person-item.delay-8,
+fellow-item.delay-8 {
+    animation-delay: 4s;
+}
+
+.fellow-item.delay-9,
+.fellow-item.delay-10,
+fellow-item.delay-11,
+fellow-item.delay-12,
+fellow-item.delay-13,
+fellow-item.delay-14,
+fellow-item.delay-15,
+fellow-item.delay-16,
+fellow-item.delay-17,
+fellow-item.delay-18,
+fellow-item.delay-19,
+fellow-item.delay-20,
+fellow-item.delay-21 {
+    animation-delay: 4.5s; /* Continue incrementing as needed */
+}
+
+.project-item:hover,
+.person-item:hover,
+fellow-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-item h3,
+.person-item h3,
+fellow-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: var(--primary_color);
+}
+
+.project-item p,
+.person-item p,
+fellow-item p {
+    font-size: 1em;
+    color: var(--light_text);
+    line-height: 1.6;
+}
+
+/* Expandable Project Info */
+.project-info {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.project-item:hover .project-info {
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1;
+}
+
+/* Project Links */
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.project-links .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+/* Avatar for People Section */
+.avatar {
+    width: 150px;
+    height: 150px;
+    background: var(--secondary_color);
+    color: var(--background_color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.person-item:hover .avatar {
+    background: var(--btn_hover_bg);
+}
+
+/* Fellow Photo Styling */
+.fellow-photo {
+    width: 120px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.fellow-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Project Logo */
+.project-logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+section#contact form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+section#contact label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--text_color);
+}
+
+section#contact input,
+section#contact textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--input_border);
+    border-radius: 8px;
+    font-size: 1em;
+    background: var(--input_bg);
+    color: var(--text_color);
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+section#contact input:focus,
+section#contact textarea:focus {
+    border: 1px solid var(--primary_color);
+    outline: none;
+    background: #F9F9F9;
+}
+
+section#contact input::placeholder,
+section#contact textarea::placeholder {
+    color: #999999;
+}
+
+section#contact .btn {
+    align-self: flex-start;
+    padding: 15px 30px;
+    background: var(--btn_bg);
+    color: var(--background_color);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+section#contact .btn:hover {
+    background: var(--btn_hover_bg);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background: var(--footer_bg);
+    color: var(--footer_text);
+    padding: 30px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+footer .social-links a {
+    color: var(--social_icon_color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+footer .social-links a.delay-1 {
+    animation-delay: 0.5s;
+}
+
+footer .social-links a.delay-2 {
+    animation-delay: 1s;
+}
+
+footer .social-links a:hover {
+    color: var(--social_icon_hover);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--btn_bg);
+    color: var(--background_color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: var(--btn_hover_bg);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+
+/* Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide Down for Section Headings */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide Up for Elements */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse Animation for Buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 194, 14, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 194, 14, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 194, 14, 0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .project-item,
+    .person-item,
+    .fellow-item {
+        flex: 1 1 45%;
+    }
+
+    /* Adjusted title size for medium screens */
+    .nav-title {
+        font-size: 1.3em;
+        /* margin-left: -8px; /* Removed to maintain alignment */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-list,
+    .people-list,
+    .fellows-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item,
+    .person-item,
+    .fellow-item {
+        flex: 1 1 80%;
+    }
+
+    header.hero h1 {
+        font-size: 2.5em;
+    }
+
+    header.hero h2 {
+        font-size: 1.8em;
+    }
+
+    header.hero p {
+        font-size: 1.2em;
+    }
+
+    /* Further adjust title size for smaller screens */
+    .nav-title {
+        font-size: 1.1em;
+        /* margin-left: -5px; /* Removed to maintain alignment */
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 1.5em;
+    }
+
+    .fellow-photo {
+        width: 100px; /* Further reduce for very small screens */
+        height: 100px;
+    }
+
+    section#about,
+    section#projects,
+    section#faculty,
+    section#fellows,
+    section#contact {
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .project-item,
+    .person-item,
+    .fellow-item {
+        padding: 20px;
+    }
+
+    .project-logo {
+        width: 100px; /* Adjust size for smaller screens */
+    }
+
+    /* Adjust About Video for Small Screens */
+    .about-video {
+        max-width: 100%;
+    }
+
+    /* Further reduce title size for very small screens */
+    .nav-title {
+        font-size: 1em;
+        /* margin-left: -3px; /* Removed to maintain alignment */
+    }
+}
+
+/* Side Menu Link Animation */
+.side-menu ul li a {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInMenu 0.3s forwards;
+}
+
+.side-menu.open ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInMenu {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Overlay Scroll Lock */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Focus States for Interactive Elements */
+.hamburger:focus,
+.nav-title:focus {
+    outline: 2px solid var(--primary_color);
+    outline-offset: 4px;
+}
